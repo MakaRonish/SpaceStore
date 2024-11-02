@@ -1,0 +1,22 @@
+
+INSERT INTO Space_gadget (Name, Price, Durability, Range, Weight, Special_Abilities) VALUES
+('Grappling Hook', '1500', '5 years', '50 meters', '2 kg', 'Pulls user up quickly'),
+('Invisibility Cloak', '5000', '10 years', 'N/A', '1 kg', 'Grants invisibility for 10 minutes'),
+('Jet Boots', '3000', '8 years', '500 meters', '3.5 kg', 'Allows flight for up to 5 minutes'),
+('Energy Shield', '2000', '6 years', 'N/A', '4 kg', 'Blocks projectiles up to 100 shots'),
+('Laser Gauntlet', '3500', '7 years', '200 meters', '1.5 kg', 'Shoots high-powered lasers'),
+('EMP Grenade', '1200', 'Single use', '50 meters', '0.5 kg', 'Disables electronics within range'),
+('Holographic Disguise Device', '2500', '4 years', 'N/A', '0.8 kg', 'Creates holographic disguise for 15 minutes'),
+('Sonic Disruptor', '2200', '6 years', '100 meters', '2.2 kg', 'Emits sonic waves that disorient enemies'),
+('Plasma Sword', '4000', '12 years', '1 meter', '3 kg', 'Cuts through most materials with ease'),
+('Tactical Drone', '6000', '5 years', '1 km', '5 kg', 'Provides aerial surveillance and attacks enemies'),
+('Forcefield Generator', '4500', '8 years', '500 meters', '4.5 kg', 'Generates a protective forcefield for 2 minutes'),
+('Stealth Suit', '7000', '10 years', 'N/A', '3 kg', 'Renders wearer invisible to electronic detection'),
+('Teleportation Belt', '5500', '7 years', '10 km', '1.5 kg', 'Teleports user up to 10 kilometers'),
+('Magnetic Gloves', '1800', '6 years', 'N/A', '1 kg', 'Allows user to cling to metal surfaces'),
+('Jetpack', '8000', '9 years', '1 km', '7 kg', 'Provides extended flight capabilities'),
+('Plasma Rifle', '5000', '10 years', '600 meters', '5 kg', 'Shoots concentrated plasma beams'),
+('Nanotech Armor', '9000', '15 years', 'N/A', '10 kg', 'Self-repairing armor with high durability'),
+('Anti-Gravity Boots', '4000', '6 years', 'N/A', '2.5 kg', 'Allows user to walk on walls or ceilings'),
+('Energy Bow', '3200', '7 years', '300 meters', '2 kg', 'Shoots energy arrows with adjustable power'),
+('Thermal Vision Goggles', '1800', '5 years', '200 meters', '1 kg', 'Enables thermal vision for detecting enemies');

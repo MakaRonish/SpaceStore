@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: url('/images/pic.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: #fff;
+        }
+        header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo {
+  position: relative;
+  color: #f5faff;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: #0d1b2a;
+  padding: 2px 15px;
+  border-radius: 20px
+}
+
+header .navigation a {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 30px;
+}
+
+header .navigation a:hover {
+    background-color: #fff;
+}
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .stat-card h2 {
+            font-size: 24px;
+        }
+        .stat-card p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<section>
+        <header>
+            <h2><a href="" class="logo">Escape Room</a></h2>
+            <div class="navigation">
+                <a href="/">home</a>
+                <a href="/Add">add</a>
+                <a href="/View">view</a>
+                <a href="/stats">stats</a>
+            </div>
+        </header>
+<section>
+    <h1>Store Statistics</h1>
+    <div class="stat-card">
+        <h2>Total Number of Customers</h2>
+        <p th:text="${totalCustomers}">150</p>
+    </div>
+    <div class="stat-card">
+        <h2>Average Spending</h2>
+        <p th:text="${averageSpending}">$120.50</p>
+    </div>
+    <div class="stat-card">
+        <h2>Most Popular Gadget</h2>
+        <p th:text="${mostPopularGadget}">Grappling Hook</p>
+    </div>
+    <div class="stat-card">
+        <h2>Total Sales Revenue</h2>
+        <p th:text="${totalSalesRevenue}">$18,000.00</p>
+    </div>
+    <div class="stat-card">
+        <h2>Customer Feedback Count</h2>
+        <p th:text="${customerFeedbackCount}">75</p>
+    </div>
+</section>
+</section>
+</body>
+</html>

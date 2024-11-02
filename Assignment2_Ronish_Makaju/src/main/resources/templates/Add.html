@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add</title>
+	<link rel="stylesheet" href="/add.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<section>
+        <header>
+            <h2><a href="" class="logo">Escape Room</a></h2>
+            <div class="navigation">
+                <a href="/">home</a>
+                <a href="/Add">add</a>
+                <a href="/View">view</a>
+                <a href="/stats">stats</a>
+            </div>
+        </header>
+        <div class="wrapper">
+            <form th:action="@{/process}" method="post" th:object="${gadgets}">
+                <h1>Add Gadgets</h1>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" required th:field="*{Name}">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Price" required  th:field="*{Price}">
+                        <i class='bx bx-dollar'></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Durability" required th:field="*{Durability}">
+                        <i class='bx bx-face' ></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Range" required th:field="*{Range}">
+                        <i class='bx bxs-time' ></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Weight" th:field="*{Weight}">
+                        <i class='bx bxs-cylinder'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Special_Abilities" required th:field="*{Special_Abilities}">
+                        <i class='bx bx-category'></i>
+                    </div>
+                 </div>
+                
+                <button type="submit" class="btn">Add Gadgets</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

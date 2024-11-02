@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Gadgets</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(/images/pic.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo {
+  position: relative;
+  color: #f5faff;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: #0d1b2a;
+  padding: 2px 15px;
+  border-radius: 20px
+}
+
+header .navigation a {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 30px;
+}
+
+header .navigation a:hover {
+    background-color: #fff;
+}
+.wrapper {
+  width: 90%;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  color: #fff;
+  padding: 40px 35px 55px;
+  margin: 0 10px;
+}
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(50px);
+    color: #fff;
+}
+
+th {
+    background-color: rgba(255, 255, 255, .2);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, .2);
+    transition: background-color 0.3s ease-in-out;
+}
+.table{
+display:flex;
+text-align:center;
+justify-content:center;
+}
+</style>
+</head>
+<body>
+	<section>
+        <header>
+            <h2><a href="" class="logo">Space store</a></h2>
+            <div class="navigation">
+                <a href="/">home</a>
+                <a href="/Add">add</a>
+                <a href="/View">view</a>
+                <a href="/stats">stats</a>
+            </div>
+        </header>
+    <div class="table">
+    <table class="wrapper">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Durability</th>
+            <th>Range</th>
+            <th>Weight</th>
+            <th>Special Abilities</th>
+            <th>Options</th>
+            <th>delete</th>
+
+        </tr>
+        <tr th:each="gadget : ${gadgets}">
+            <td th:text="${gadget.ID}"></td>
+            <td th:text="${gadget.Name}"></td>
+            <td th:text="${gadget.Price}"></td>
+            <td th:text="${gadget.Durability}"></td>
+            <td th:text="${gadget.Range}"></td>
+            <td th:text="${gadget.Weight}"></td>
+            <td th:text="${gadget.Special_Abilities}"></td>
+            <td><a th:href="@{/edit/{id}(id=${gadget.ID})}">EDIT</a></td>
+			<td><a th:href="@{/delete/{id}(id=${gadget.ID})}">DELETE</a></td>
+        </tr>
+    </table>
+    </div>
+    </section>
+
+
+</body>
+</html>
